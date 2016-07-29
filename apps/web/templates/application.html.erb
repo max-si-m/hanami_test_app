@@ -1,0 +1,22 @@
+<!doctype HTML>
+<html>
+  <head>
+    <title>Bookshelf</title>
+  </head>
+  <body>
+    <h1>Bookshelf</h1>
+
+    <% unless params.valid? %>
+      <div class="errors">
+        <h3>There was a problem with your submission</h3>
+        <ul>
+          <% params.error_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <%= yield %>
+  </body>
+</html>

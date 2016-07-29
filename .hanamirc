@@ -1,0 +1,4 @@
+project=hanami_test_app
+architecture=container
+test=rspec
+template=erb
